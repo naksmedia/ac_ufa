@@ -38,12 +38,12 @@ def index(request):
         publish_on_main_page=True).order_by('-published_date')[:7]
 
     #Посты с картинками
-    posts = {}
-    for post in main_page_news:
-        posts[post] = PostPhoto.objects.filter(post__pk=post.pk).first()
+    # posts = {}
+    # for post in main_page_news:
+    #     posts[post] = PostPhoto.objects.filter(post__pk=post.pk).first()
     
     #Посты без картинок
-    # posts = Post.objects.all()[:3]
+    posts = Post.objects.all()[:3]
 
     # main_page_articles = Article.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:3]

@@ -1,7 +1,40 @@
 // Кнопка поиска
 
-window.onload = function () {
+$(document).ready(function() {
+  console.log('123');
 
+  $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+  });
+
+  $('.smoothScroll').on('click',function (e) {
+    // console.log('clicked');
+    // console.log($(this));
+    // console.log('HREF', $(this).attr('href'));
+    e.preventDefault();
+    var target = this.hash,
+    $target = $(target);
+
+   $('html, body').stop().animate({
+     'scrollTop': $target.offset().top
+    }, 900, 'swing', function () {
+     window.location.hash = target;
+    });
+  });
+
+//   $('.smoothScroll').on('click', function (event) {
+//     event.preventDefault();
+//     console.log('#clicked');
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 1000);
+// });
+
+  $(document).ready(function () {
+    $('.animated-icon1,.animated-icon3,.animated-icon4').click(function () {
+      $(this).toggleClass('open');
+    });
+  });
   // Обрез текста
   $('.box__news').each(function () {
     let size = 250;
@@ -11,7 +44,6 @@ window.onload = function () {
       $(this).text(`${slicedText}...`);
     }
   })
-
 
   //owl-carousel initiazilation
   $('.owl-carousel').owlCarousel({
@@ -46,41 +78,41 @@ window.onload = function () {
     ]
   });
 
-  // Плавная прокрутка
+  // // Плавная прокрутка
 
-  new SmoothScroll();
+  // new SmoothScroll();
 
-  function SmoothScroll(el) {
-    var t = this, h = document.documentElement;
-    el = el || window;
-    t.rAF = false;
-    t.target = 0;
-    t.scroll = 0;
-    t.animate = function () {
-      t.scroll += (t.target - t.scroll) * 0.1;
-      if (Math.abs(t.scroll.toFixed(5) - t.target) <= 0.47131) {
-        cancelAnimationFrame(t.rAF);
-        t.rAF = false;
-      }
-      if (el == window) scrollTo(0, t.scroll);
-      else el.scrollTop = t.scroll;
-      if (t.rAF) t.rAF = requestAnimationFrame(t.animate);
-    };
-    el.onmousewheel = function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var scrollEnd = (el == window) ? h.scrollHeight - h.clientHeight : el.scrollHeight - el.clientHeight;
-      t.target += (e.wheelDelta > 0) ? -70 : 70;
-      if (t.target < 0) t.target = 0;
-      if (t.target > scrollEnd) t.target = scrollEnd;
-      if (!t.rAF) t.rAF = requestAnimationFrame(t.animate);
-    };
-    el.onscroll = function () {
-      if (t.rAF) return;
-      t.target = (el == window) ? pageYOffset || h.scrollTop : el.scrollTop;
-      t.scroll = t.target;
-    };
-  }
+  // function SmoothScroll(el) {
+  //   var t = this, h = document.documentElement;
+  //   el = el || window;
+  //   t.rAF = false;
+  //   t.target = 0;
+  //   t.scroll = 0;
+  //   t.animate = function () {
+  //     t.scroll += (t.target - t.scroll) * 0.1;
+  //     if (Math.abs(t.scroll.toFixed(5) - t.target) <= 0.47131) {
+  //       cancelAnimationFrame(t.rAF);
+  //       t.rAF = false;
+  //     }
+  //     if (el == window) scrollTo(0, t.scroll);
+  //     else el.scrollTop = t.scroll;
+  //     if (t.rAF) t.rAF = requestAnimationFrame(t.animate);
+  //   };
+  //   el.onmousewheel = function (e) {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     var scrollEnd = (el == window) ? h.scrollHeight - h.clientHeight : el.scrollHeight - el.clientHeight;
+  //     t.target += (e.wheelDelta > 0) ? -70 : 70;
+  //     if (t.target < 0) t.target = 0;
+  //     if (t.target > scrollEnd) t.target = scrollEnd;
+  //     if (!t.rAF) t.rAF = requestAnimationFrame(t.animate);
+  //   };
+  //   el.onscroll = function () {
+  //     if (t.rAF) return;
+  //     t.target = (el == window) ? pageYOffset || h.scrollTop : el.scrollTop;
+  //     t.scroll = t.target;
+  //   };
+  // }
 
 
   // Счетчик
@@ -99,11 +131,7 @@ window.onload = function () {
 
   // Бургер меню
 
-  $(document).ready(function () {
-    $('.animated-icon1,.animated-icon3,.animated-icon4').click(function () {
-      $(this).toggleClass('open');
-    });
-  });
+
 
   // Works everywhere
   $(document).ready(function () {
@@ -269,16 +297,18 @@ window.onload = function () {
     });
   });
 
-    // Якорь
+    // плавная прокрутка
 
-    $(document).ready(function () {
-      $("#service").on("click", "a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-          top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 1500);
-      });
-    });
-  
+    // $(document).ready(function () {
+    //   $(".smoothScroll").on("click", function (e) {
+    //     event.preventDefault();
+    //     // console.log($(this));
+    //     // console.log($(this).attr('href'));
+    //     var id = $(this).attr('href');
+    //       top = $(id).offset().top;
+    //     $('body,html').animate({ scrollTop: top }, 1500);
+    //   });
+    // });
+ 
 
-};
+});
