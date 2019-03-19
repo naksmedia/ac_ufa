@@ -65,6 +65,11 @@
 	color: #3f3f3f;
 	background-color: #3f3f3f;
 }
+
+.modal-header-feedback{
+    padding: 0px;
+}
+
 .modal-header {
 	position: relative;	
 	display: block;
@@ -94,7 +99,7 @@ padding: 0;
 }
 
 .modal-header{
-	padding: 75px 75px 0px;
+
 	// background-color: #838383;
 	@media screen and (max-width: 450px) {
 		padding: 35px 25px 15px;
@@ -103,7 +108,7 @@ padding: 0;
 
 
 .modal-body{
-	padding: 0px 75px 25px;
+	padding: 0px 45px 25px;
 	color: #000;	
 	@media screen and (max-width: 450px) {
         padding: 0px 25px 15px;

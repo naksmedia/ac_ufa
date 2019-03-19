@@ -55,8 +55,9 @@
     color: #fff;
     margin-right: 15px;
     font-size: 26px;
-    @media screen and (max-width: 992px){       
+    @media screen and (max-width: 1200px){       
       margin-right: 0px;
+      font-size: 14px;
          }
 }
 
@@ -92,6 +93,7 @@
               margin-top: 15px;
               margin-bottom: 0px;
          }
+   
 }
 
 .feedback_button_header a{
@@ -106,6 +108,10 @@
     padding: 8px 50px;
     border-radius: 45px;  
     color: #fff;
+    @media screen and (max-width: 1200px){       
+       font-size: 12px;
+       padding: 8px 35px;
+   }
     &:hover {
         background-color: #ffffff25;
         transition: 0.2s;
@@ -114,7 +120,7 @@
 
 .box_logo_3{
     margin-top: 15px;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 1200px){
        display: none;
          }
 }
@@ -144,7 +150,7 @@
 
 .logo_ac_2{
     width: 250px;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 1200px){
       width: 200px;
       margin-top: 15px;
       margin-bottom: 15px;
@@ -372,7 +378,7 @@
 .head_bg_box_button {
     vertical-align: middle;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     @media screen and (max-width: 397px) {
         display: none;
     }

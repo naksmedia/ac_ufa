@@ -25,13 +25,6 @@
     background: url(/static/img/phone.png) center 0 no-repeat;
 }
 
-.contacti_number {
-    font-size: 30px;
-    font-weight: 450;
-    color: #fff;
-    padding-left: 35px;
-}
-
 .contacti_consultant {
     font-size: 16px;
     font-weight: 350;
@@ -40,23 +33,52 @@
     margin-top: -15px;
 }
 
+
+.map{
+    @media screen and (max-width: 435px) {
+        margin-top: 15px;
+    }
+}
+
+.info_organization{
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+   
+}
+
+.sub-information_organization{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;   
+    margin-bottom: 15px;
+}
+
+
+.contacti_number {
+    font-size: 26px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 35px;
+}
+
 .contacti_adres_text::before {
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-left: -35px;
     background: url(/static/img/here.png) center 0 no-repeat;
 }
 
 .contacti_adres_text {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 350;
     color: #fff;
     padding-left: 35px;
-    margin-top: -15px;
-}
+    }
 
 
 .contacti_mail::before {
@@ -81,9 +103,11 @@
     }
 }
 
-.map{
-    @media screen and (max-width: 435px) {
-        margin-top: 15px;
+.box_mail a{
+    text-decoration: none;
+    &:hover{
+        color: #b9b9b9;
     }
 }
+
 

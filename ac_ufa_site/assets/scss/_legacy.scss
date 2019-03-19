@@ -68,3 +68,33 @@ body {
         display: none;
       }  
 }
+
+.remove_1200{
+    @media screen and (max-width: 1200px) {
+        display: none;
+      }  
+}
+
+
+.box_background{
+  background-color: #f3f3f3;
+  padding: 50px 0px 50px;
+  @media screen and (max-width: 435px) {
+      padding: 25px 0px 25px;   
+    }
+}
+
+.box_background_partners{
+  padding: 50px 0px 50px;
+  @media screen and (max-width: 435px) {
+      padding: 25px 0px 25px;   
+    }
+}
+
+
+.otstup_contacti{
+  @media screen and (max-width: 1200px) {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+}
