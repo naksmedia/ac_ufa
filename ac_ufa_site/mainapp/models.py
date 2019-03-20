@@ -51,7 +51,7 @@ class ContentMixin(models.Model):
     '''base class for Post, Article and Documents'''
     title = models.CharField(u'Название', max_length=200)
     short_description = models.CharField(
-        u'Краткое описание', max_length=300, blank=True)
+        u'Краткое описание', max_length=100, blank=True)
     tags = models.ManyToManyField(Tag, verbose_name='Тэги')
     published_date = models.DateTimeField(
         u'Дата публикации', blank=True, null=True)

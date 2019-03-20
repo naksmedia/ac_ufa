@@ -1,5 +1,5 @@
 {% load static %}
-<div class="bg-info-menu">
+<div class="bg-info-menu animated fadeInDown">
     <div class="bg-color">
         <div class="container-fluid">
             <div class="header_box">
@@ -10,11 +10,11 @@
                             <img src="{% static 'img/logo_gac_rb.svg' %}" class="logo_ac" alt="">
                         </a>
                     </div>
-                    <div class="col-sm-5 col-xl-2">
+                    <div class="col-sm-5 col-xl-1">
                         <div class="logo_ac_mob">
                             <a href="{% url 'index' %}">
-                                <img src="{% static '/img/ac_ctc_logo.svg' %}" class="logo_ac_2" alt="">
-                                <img src="{% static '/img/logo_sasp.svg' %}"
+                                <img src="{% static 'img/ac_ctc_logo.svg' %}" class="logo_ac_2" alt="">
+                                <img src="{% static 'img/logo_sasp.svg' %}"
                                     title="Организация допущена к выполнению работ по аттестации сварочного производства"
                                     class="logo_sasp_mob" alt="">
                             </a>
@@ -37,9 +37,9 @@
                             <a href="" class="feedback_header" data-toggle="modal" data-target="#modal-question">
                                 Обратная связь
                             </a>
-                        </div>
+                        </div>  
                     </div>
-                    <div class="col-xl-1 remove_1200">
+                    <div class="col-xl-2">
                         <div class="box_logo_3">
                             <img src="{% static '/img/logo_2.png' %}"
                                 title="Лауреат Премии Правительства РФ в области качества 2012 года" alt="">
@@ -89,7 +89,7 @@
                                     заявку</a>
                             </button>
                             <button class="service">
-                                <a href="#service" class="service_button">Услуги</a>
+                                <a href="#service" class="service_button smoothScroll">Услуги</a>
                             </button>
                         </div>
                         <div class="head_bg_box_button_mob">
@@ -97,7 +97,7 @@
                                     <a href="" data-toggle="modal" data-target="#modal-statement" class="request_button">Подать заявку</a>
                                 </button></p>
                             <p><button class="service">
-                                    <a href="#service" class="service_button">Услуги</a>
+                                    <a href="#service" class="service_button smoothScroll">Услуги</a>
                                 </button></p>
                         </div>
                         <p class="sro_np_naks_text">

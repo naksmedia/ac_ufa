@@ -79,6 +79,8 @@ def news_two(request):
     return render(request, 'mainapp/news_two.html')
 def all_news(request):
     return render(request, 'mainapp/all_news.html')
+def political(request):
+    return render(request, 'mainapp/political.html')
 
 def details(request, pk=None, content=None):
 

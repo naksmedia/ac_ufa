@@ -22,7 +22,7 @@
 .modal-footer {
 	justify-content: flex-start;
 	border-top: none;
-	padding: 0px 75px 75px;
+	padding: 0px 45px 75px;
 	@media screen and (max-width: 450px) {
 		padding: 0px 35px 35px;
 	}	
@@ -116,8 +116,8 @@ padding: 0;
 }
 
 .modal-header p {
-	font-size: 0.875rem;
-	line-height: 20px;
+	font-size: 18;
+	line-height: 1.8;
 	color: #000;	
 }
 
@@ -234,7 +234,7 @@ hr {
 }
 
 .modal__title__small__text{
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 500;
 }
 

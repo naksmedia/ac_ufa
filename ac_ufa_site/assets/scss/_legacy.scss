@@ -12,6 +12,9 @@ body {
   @media (min-width: 360px) {
         max-width: 1570px;
     }
+  @media (min-width: 1600px) {
+        max-width: 1850px;
+    }
 }
 
 .box_inside_pages{
@@ -39,7 +42,7 @@ body {
     margin-bottom: 5px;
     @media screen and (max-width: 435px) {
         margin-top: 15px;
-        font-size: 30px
+        font-size: 20px
       }
 }
 
@@ -50,6 +53,16 @@ body {
         margin-bottom: 0px; 
       }
 }
+
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 35px;
+  @media screen and (max-width: 435px) {
+      margin-bottom: 15px;       
+    }
+}
+
 
 .no-otstup{
     @media screen and (max-width: 435px) {
@@ -97,4 +110,61 @@ body {
     margin-top: 45px;
     margin-bottom: 45px;
 }
+}
+
+
+
+//  Политика конфиденциальности
+
+.header__political {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 450;
+  color: #000;
+  margin-top: 15px;
+
+  @media screen and (max-width: 1199px) {
+      margin-top: 15px;
+  }
+
+}
+
+.political__text__small {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.text_pynkt{
+font-size: 14px;
+font-weight: 450;
+}
+
+.line_end {
+  border: 0.5px solid #ebebeb;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.header_right_column{
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.box_right_column a{
+text-decoration: none;
+list-style-type: none;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.8;
+}
+
+.sider_bar {
+  position: sticky;
+  top: 4rem;
+  z-index: 1000;
+  height: calc(45vh);
 }

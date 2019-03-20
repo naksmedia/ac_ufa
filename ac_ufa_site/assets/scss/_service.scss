@@ -16,9 +16,6 @@
     }
 }
 
-
-
-
 .headline_text {   
     font-size: 45px;
     color: #39567e;
@@ -29,15 +26,6 @@
         font-size: 30px
       }
 }
-
-.subtitle {
-    font-size: 14px;
-    margin-bottom: 35px;
-    @media screen and (max-width: 435px) {
-        margin-bottom: 15px;       
-      }
-}
-
 
 
 // img
@@ -241,7 +229,8 @@
 .more_button {   
     border: 1px solid rgb(128, 128, 128);   
     padding: 10px 25px;
-    color: #000;   
+    color: #000;  
+    cursor: pointer; 
     @media screen and (max-width: 435px) {
         padding: 10px 140px;
     }

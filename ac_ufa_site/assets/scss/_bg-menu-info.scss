@@ -15,6 +15,10 @@
          }
 }
 
+.header_box_inside_pages{
+    padding: 45px 0px;
+}
+
 .header_phone{
     @media screen and (max-width: 320px){
         display: none;
@@ -36,28 +40,14 @@
    
 }
 
-.text_phone::before {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 0;
-    margin-top: 6px;
-    margin-left: -20px;
-    background: url(/static/img/phone.png) center 0 no-repeat;
-    @media screen and (max-width: 992px){       
-       display: none;
-         }
-}
-
 
 .text_phone{
     color: #fff;
     margin-right: 15px;
     font-size: 26px;
-    @media screen and (max-width: 1200px){       
+    @media screen and (max-width: 1600px){       
       margin-right: 0px;
-      font-size: 14px;
+      font-size: 20px;
          }
 }
 
@@ -108,7 +98,7 @@
     padding: 8px 50px;
     border-radius: 45px;  
     color: #fff;
-    @media screen and (max-width: 1200px){       
+    @media screen and (max-width: 1600px){       
        font-size: 12px;
        padding: 8px 35px;
    }
@@ -118,9 +108,8 @@
     }   
 }
 
-.box_logo_3{
-    margin-top: 15px;
-    @media screen and (max-width: 1200px){
+.box_logo_3{  
+       @media screen and (max-width: 992px){
        display: none;
          }
 }
@@ -141,17 +130,18 @@
 }
 
 .logo_ac{
+    width: 270px;
     @media screen and (max-width: 992px){
-        width: 270px;
+      width: 270px;
       margin-top: 15px;
       margin-bottom: 15px;
          }
 }
 
 .logo_ac_2{
-    width: 250px;
+    width: 70px;
     @media screen and (max-width: 1200px){
-      width: 200px;
+      width: 70px;
       margin-top: 15px;
       margin-bottom: 15px;
          }   
@@ -178,7 +168,7 @@
 
 // Menu
 .menu__background {
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 20px 30px;
     background-color: #fff;
     // border-radius: 7px;   
    
@@ -203,7 +193,7 @@
 .menu__navbar ul {
     color: #39567e;
     font-size: 16;  
-    
+    text-transform: uppercase;
     justify-content: space-between;
 
     @media screen and (max-width: 992px) {
@@ -224,7 +214,7 @@
 .menu__navbar .navbar .nav-item .nav-link {
     padding: 0;
     color: #272727;
-    font-weight: 450;
+    // font-weight: 450;
     &:hover{
         color: #39567e;  
         transition: 0.2s;
@@ -269,7 +259,7 @@
         padding: 0px 0px 15px;
         font-weight: 200;
         color: #272727;
-        font-weight: 450;
+        // font-weight: 450;
     }
 }
 
@@ -419,14 +409,14 @@
         text-decoration: none;
         color: #fff;
         font-size: 16px;
-        font-weight: 450;
+        // font-weight: 450;
     }
 }
 
 .request_button {
     background-color: #ffbd3d;
     border: none;       
-    padding: 10px 25px;
+    padding: 11px 25px;
     color: #000;
     text-decoration: none;
     @media screen and (max-width: 397px) {
@@ -435,7 +425,7 @@
     }
 
     &:hover {
-        background-color: #e9b754;
+        background-color: #fac55a;
         transition: 0.2s;
         color: #000;
     }
