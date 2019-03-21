@@ -1993,8 +1993,6 @@ button:focus {
   text-decoration: none; }
 
 .box__news {
-  padding: 25px 0px;
-  margin-top: 15px;
   font-size: 16px;
   font-weight: 400;
   color: #5a5a5a; }

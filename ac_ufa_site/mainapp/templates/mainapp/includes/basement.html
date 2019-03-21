@@ -16,8 +16,8 @@
                     </p>
 
                     <div class="spks_logo">
-                       <a href="http://spks.ru">
-                           <img src="{% static '/img/skps__logo.png' %}" alt="">
+                        <a href="http://spks.ru">
+                            <img src="{% static '/img/skps__logo.png' %}" alt="">
                         </a>
                     </div>
                 </div>
@@ -31,36 +31,21 @@
 
                 <div class="col-sm-4 col-md-4 col-xl-2">
 
+
+                    {% for post in basement_news %}
                     <div class="box_footer_news">
-                        <a href="#news">
+                        <a href="{% url 'details' 'post' post.pk %}">
                             <p class="footer_news">
-                                Соглашение о сотрудничестве
+                                {{ post.title }}
                             </p>
                         </a>
                         <p class="date_news_footer">
-                            15 января, 2018
+                            {{ post.published_date|date:"d M. Y"}}
                         </p>
                     </div>
-                    <div class="box_footer_news">
-                        <a href="#news">
-                            <p class="footer_news">
-                                Подписание договора
-                            </p>
-                        </a>
-                        <p class="date_news_footer">
-                            15 января, 2018
-                        </p>
-                    </div>
-                    <div class="box_footer_news">
-                        <a href="#news2">
-                            <p class="footer_news">
-                                Прошла аттестация сварщиков
-                            </p>
-                        </a>
-                        <p class="date_news_footer">
-                            15 января, 2018
-                        </p>
-                    </div>
+                    {% endfor %}
+
+
                 </div>
                 <div class="col-xl-1">
                     <div class="head_info_footer">
@@ -96,7 +81,7 @@
                 </div>
                 <div class="col-sm-6 col-md-6 col-xl-2">
                     <div class="feedback_button_footer">
-                        <a href="" class="feedback_footer"  data-toggle="modal" data-target="#modal-question">
+                        <a href="" class="feedback_footer" data-toggle="modal" data-target="#modal-question">
                             Обратная связь
                         </a>
                     </div>

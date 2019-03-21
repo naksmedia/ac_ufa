@@ -19,113 +19,23 @@
         </div>
         <div class="box_document">
             <div class="row">
+            {% for doc in documents %}
                 <div class="col-xl-4">
-                    <a href="" download="">
+                    <a href="{{ doc.document }}" download="">
                         <div class="box_doc_file" title="Скачать">
-                            <div class="icon_pdf"></div>
+                            <div class="{% if doc.extension == '.docx' %}icon_word{% else %}icon_pdf{% endif %}"></div>
                             <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
+                                {{ doc.title }}
+                                {{ doc.extension }}
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file" title="Скачать">
-                            <div class="icon_pdf"></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file" title="Скачать">
-                            <div class="icon_pdf"></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
+            {% endfor %}
+
             </div>
         </div>
-        <div class="box_document">
-            <div class="row">
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file" title="Скачать">
-                            <div class="icon_word"></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file_height" title="Скачать">
-                            <div class="icon_word"></div>
-                            <p class="doc_text_name">
-                                Пример оформления заявок
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file_height" title="Скачать">
-                            <div class="icon_pdf  "></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="box_document_list">
-            <div class="row">
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file" title="Скачать">
-                            <div class="icon_word"></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file_height" title="Скачать">
-                            <div class="icon_word"></div>
-                            <p class="doc_text_name">
-                                Пример оформления заявок
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" download="">
-                        <div class="box_doc_file_height" title="Скачать">
-                            <div class="icon_pdf  "></div>
-                            <p class="doc_text_name">
-                                ПБ-03-273-99 "Правила аттестации сварщиков
-                                и специалистов сварочного производства"
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-xl-12">
                <div class="box_doc_button">

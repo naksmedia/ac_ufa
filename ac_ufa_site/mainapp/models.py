@@ -72,6 +72,7 @@ class Post(ContentMixin):
         Category, verbose_name='Категория', on_delete=models.CASCADE)
     publish_on_news_page = models.BooleanField(
         verbose_name="Опубликовать в ленте новостей", default=False)
+    publish_in_basement=models.BooleanField(u'Опубликовать в подвале на главной', default=False)
 
     class Meta:
         ordering = ['created_date']
@@ -137,6 +138,10 @@ class Document(models.Model):
 
     def __str__(self):
         return self.title
+
+    def extension(self):
+        name, extension = os.path.splitext(self.document.name)
+        return extension
 
 
 def upload_to(instance, filename):

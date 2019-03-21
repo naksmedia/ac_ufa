@@ -19,84 +19,30 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-3">
-                <div class="link__read__news__inside">
-                    <div class="block__news">
-                        <a href="{% url 'index' %}#head__page" class="link__news"></a>
-                        <div class="box__news">
-                            <p class="data__news__main">25 Декабря 2018</p>
-                            <p class="box__news__text">
-                                4 марта 2019 года подписано соглашение о сотрудничестве между Государственным
-                                образовательным учреждением высшего профессионального образования Луганской Народной
-                                Республики "Донбасский государственный технический университет" и СРО Ассоциация
-                                "НАКС".</p>
-                        </div>
-                        </a> </a>
-                        <button class="read_news">
-                            <a href="#" class="read_news_text">Читать</a>
-                        </button>
-                    </div>
-
-                </div>
+        <div class="row mb-5">
+            <div class="col-xl-1">
             </div>
-            <div class="col-xl-3">
-                <div class="link__read__news__inside">
-                    <div class="block__news">
-                        <a href="{% url 'index' %}#head__page" class="link__news"></a>
-                        <div class="box__news">
-                            <p class="data__news__main">25 Декабря 2018</p>
-                            <p class="box__news__text">
-                                4 марта 2019 года подписано соглашение о сотрудничестве между Государственным
-                                образовательным учреждением высшего профессионального образования Луганской Народной
-                                Республики "Донбасский государственный технический университет" и СРО Ассоциация
-                                "НАКС".</p>
+            <div class="col-xl-9">
+                <div class="row">
+                    {% for post in news %}
+                    <div class="col-xl-4">
+                        <div class="link__read__news__inside">
+                            <div class="block__news">
+                                <a href="{% url 'index' %}#head__page" class="link__news"></a>
+                                    <p class="data__news__main">{{ post.published_date|date:"d M. Y"}}</p>
+                                <div class="box__news mt-1">
+                                    <p class="box__news__text">
+                                        {{ post.title }}</p>
+                                </div>
+                                </a> </a>
+                                <button class="read_news mt-2">
+                                    <a href="{% url 'details' 'post' post.pk %}" class="read_news_text">Читать</a>
+                                </button>
+                            </div>
                         </div>
-                        </a> </a>
-                        <button class="read_news">
-                            <a href="#" class="read_news_text">Читать</a>
-                        </button>
                     </div>
-
+                    {% endfor %}
                 </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="link__read__news__inside">
-                    <div class="block__news">
-                        <a href="{% url 'index' %}#head__page" class="link__news"></a>
-                        <div class="box__news">
-                            <p class="data__news__main">25 Декабря 2018</p>
-                            <p class="box__news__text">
-                                4 марта 2019 года подписано соглашение о сотрудничестве между Государственным
-                                образовательным учреждением высшего профессионального образования Луганской Народной
-                                Республики "Донбасский государственный технический университет" и СРО Ассоциация
-                                "НАКС".</p>
-                        </div>
-                        </a> </a>
-                        <button class="read_news">
-                            <a href="#" class="read_news_text">Читать</a>
-                        </button>
-                    </div>
-
-                </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Назад</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="all-{% url 'news_two' %}#all-news">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Вперед</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock %}

@@ -70,7 +70,7 @@ def index(request):
         'posts': posts,
         # 'docs': docs,
         # 'articles': main_page_articles,
-        'send_message_form': SendMessageForm(),
+        # 'send_message_form': SendMessageForm(),
         # 'subscribe_form': SubscribeForm(),
         # 'ask_question_form': AskQuestionForm()
     }
@@ -86,17 +86,26 @@ def reestr(request):
     return render(request, 'mainapp/reestr.html', content)
 
 def doc(request):
-    return render(request, 'mainapp/doc.html')
+    documents= Document.objects.all()
+    content={
+        "title": "doc",
+        "documents": documents
+    }
+    return render(request, 'mainapp/doc.html', content)
 def news(request):
     return render(request, 'mainapp/news.html')
 def news_two(request):
     return render(request, 'mainapp/news_two.html')
 def all_news(request):
-    return render(request, 'mainapp/all_news.html')
+    content = {
+        'title': 'All news',
+        'news': Post.objects.all().order_by('-published_date')[:9]
+    }
+    return render(request, 'mainapp/all_news.html', content)
 def political(request):
     return render(request, 'mainapp/political.html')
 
-def details(request, pk=None, content=None):
+def details(request, content=None, pk=None):
 
     return_link = HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -118,8 +127,7 @@ def details(request, pk=None, content=None):
             'post': obj,
             'images': attached_images,
             'documents': attached_documents,
-            'bottom_related': Article.objects.all().order_by(
-                '-created_date')[:3]
+            'bottom_related_news': Post.objects.filter(publish_on_main_page=False).exclude(pk=pk).order_by('published_date')[:4]
         }
     if content == 'article':
         tags_pk_list = [tag.pk for tag in obj.tags.all()]
@@ -128,12 +136,15 @@ def details(request, pk=None, content=None):
         post_content = {
             'post': obj,
             'related': related_articles,
-            'bottom_related': related_articles.order_by('-created_date')[:3]
+            #Следуюая строка - это вывод новостей в нижную часть страницы
+            'bottom_related_news': related_articles.order_by('-created_date')[:4]
         }
 
     context = common_content.copy()
     context.update(post_content)
     context['return_link'] = return_link
+
+    print('CONTEXT:', context)
 
     print(request.resolver_match)
     print(request.resolver_match.url_name)

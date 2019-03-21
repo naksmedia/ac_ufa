@@ -103,7 +103,7 @@ class PostAdmin(admin.ModelAdmin):
     fields = [
         'id', 'title', 'tags', 'category', 'author', 'short_description',
         'text', get_url, 'created_date', 'published_date',
-        'publish_on_main_page', 'publish_on_news_page'
+        'publish_on_main_page', 'publish_on_news_page', 'publish_in_basement'
     ]
     readonly_fields = ['id', get_url]
     list_display = [
