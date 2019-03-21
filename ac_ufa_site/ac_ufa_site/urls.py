@@ -22,12 +22,12 @@ from django.conf import settings
 urlpatterns = [
    path('admin/', admin.site.urls),
    path('', mainapp.index, name='index'),
-   path('reestr/', mainapp.reestr, name='reestr'),  
-   path('doc/', mainapp.doc, name='doc'), 
-   path('news/', mainapp.news, name='news'), 
-   path('news_two/', mainapp.news_two, name='news_two'), 
-   path('all_news/', mainapp.all_news, name='all_news'), 
-   path('political/', mainapp.political, name='political'), 
+   path('reestr/', mainapp.reestr, name='reestr'),
+   path('doc/', mainapp.doc, name='doc'),
+   path('details/<slug:content>/<slug:pk>', mainapp.details, name='details'),
+   path('news_two/', mainapp.news_two, name='news_two'),
+   path('all_news/', mainapp.all_news, name='all_news'),
+   path('political/', mainapp.political, name='political'),
     path(
         'detailview/<slug:content>/<slug:pk>',
         mainapp.details,

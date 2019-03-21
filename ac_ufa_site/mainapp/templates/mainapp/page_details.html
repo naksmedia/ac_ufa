@@ -40,10 +40,10 @@
                     </div>
 
                     <p class="header__news">
-                        Соглашение о сотрудничестве в сфере подготовки, оценки квалификации и аттестации специалистов
-                        сварочного производства.
+                       {{ post.title }}
                     </p>
-                    <p class="date__news__inside">2 ноября 2018</p>
+                    {% comment %} <p class="date__news__inside">{{ post.published_date|date: "d M. Y" }}</p> С ПРОБЕЛОМ БУДЕТ ОШИБКА {% endcomment %}
+                    <p class="date__news__inside">{{ post.published_date|date:"d M. Y"}}</p>
 
                     <div class="box__news__inside">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -68,13 +68,7 @@
                             </a>
                         </div>
                         <p class="small__text__news">
-                            01 ноября 2018 года подписано соглашение о сотрудничестве в сфере подготовки, оценки
-                            квалификации и аттестации специалистов сварочного производства между Министерством
-                            занятости и
-                            трудовых отношений Республики Узбекистан, Саморегулируемой организацией Ассоциация
-                            "Национальное Агентство Контроля Сварки", Обществом с ограниченной ответственностью
-                            "Межотраслевой Высокотехнологичный Центр НАКС" и Международной ассоциацией по правовому
-                            содействию трудовым мигрантам.
+                            {{ post.text|safe}}
                         </p>
                         <div class="line__news__end"></div>
                         <p class="prikrep__doc">Прикрепленный файл:</p>
@@ -142,7 +136,7 @@
                 </div>
 
 
-            </div>           
+            </div>
         </div>
         <div class="row">
             <div class="col-xl-3"></div>
@@ -187,7 +181,7 @@
                 </div>
 
 
-            </div>           
+            </div>
         </div>
 
 

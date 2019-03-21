@@ -1,6 +1,19 @@
-from django.shortcuts import render
-from .models import Document, Post, PostPhoto
-from .forms import SendMessageForm
+import json
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import Http404, JsonResponse, HttpResponseRedirect
+from django.core.exceptions import ValidationError
+# from django.contrib import messages
+from django.utils import timezone
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
+from .models import Registry, Menu
+from .models import Staff
+from .forms import PostForm, ArticleForm, DocumentForm
+from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, SearchRegistryForm
+from .adapters import MessageModelAdapter
+from .message_tracker import MessageTracker
+from .utilites import UrlMaker
+from .registry_import import Importer, data_url
 
 # Create your views here.
 
@@ -34,16 +47,17 @@ def index(request):
     # docs = Document.objects.filter(
     #     publish_on_main_page=True).order_by('-created_date')[:3]
 
-    main_page_news = Post.objects.filter(
-        publish_on_main_page=True).order_by('-published_date')[:7]
+    # main_page_news = Post.objects.filter(
+    #     publish_on_main_page=True).order_by('-published_date')[:7]
 
     #Посты с картинками
     # posts = {}
     # for post in main_page_news:
     #     posts[post] = PostPhoto.objects.filter(post__pk=post.pk).first()
-    
-    #Посты без картинок
-    posts = Post.objects.all()[:3]
+
+    #Вывести ВСЕ объекты из БД
+    # posts = Post.objects.all()[:3]
+    posts = Post.objects.filter(publish_on_main_page=True)[:7]
 
     # main_page_articles = Article.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:3]

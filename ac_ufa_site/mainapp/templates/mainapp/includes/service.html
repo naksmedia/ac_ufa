@@ -22,8 +22,8 @@
                     <div class="box_img_service">
                         <a href="" class="service_link">
                             <div class="box_content">
-                                <p class="name_service">                                   
-                                    {{ post.title }}                                 
+                                <p class="name_service">
+                                    {{ post.title }}
                                 </p>
                                 <div class="line_service_yellow"></div>
                             </div>
@@ -31,11 +31,11 @@
                     </a>
                     <div class="box_head_serivce">
                         <p class="head_service">
-                            {{ post.title }}
+                            {% comment %} {{ post.title }} {% endcomment %}
+                            {{ post.short_description }}
                         </p>
                         <p class="info_text_service">
-                            {{ post.short_description }}
-                            {{ post.text|safe}}
+                            {% comment %} {{ post.text|safe}} {% endcomment %}
                         </p>
                         <button class="more">
                             <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="more_button">
@@ -44,10 +44,10 @@
                         </button>
                         {% include 'mainapp/includes/detail_service.html' %}
                     </div>
-    
+
                 </div>
                 {% endfor %}
-    
+
             </div>
         </div>
     </div>
