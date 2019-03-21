@@ -18,6 +18,7 @@ from .registry_import import Importer, data_url
 # Create your views here.
 
 def index(request):
+    #TODO:  сделать когда-нибудь вывод форм на глваную
     title = 'НАКС Уфа'
     """this is mainpage view with forms handler and adapter to messages"""
     # tracker = MessageTracker()
