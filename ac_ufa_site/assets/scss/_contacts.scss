@@ -9,6 +9,9 @@
     @media screen and (max-width: 435px) {
         padding: 25px 0px 25px;   
       }
+    @media screen and (max-width: 992px) {
+        text-align: center;  
+      }
 }
 
 .box_contacti_number {
@@ -35,8 +38,9 @@
 
 
 .map{
-    @media screen and (max-width: 435px) {
+    @media screen and (max-width: 992px) {
         margin-top: 15px;
+
     }
 }
 

@@ -1,5 +1,6 @@
 // footer
 
+
 .box_footer_bg{
     padding: 50px;
     @media screen and (max-width: 435px) {
@@ -97,6 +98,10 @@ color: #fff;
     margin-left: 15px;
 }
 
+.feedback_button_footer a{
+text-decoration: none;
+}
+
 
 
 .feedback_footer {
@@ -114,6 +119,7 @@ color: #fff;
     &:hover {
         background-color: #ffffff25;
         transition: 0.2s;
+        color: #fff;
     }
    
 }

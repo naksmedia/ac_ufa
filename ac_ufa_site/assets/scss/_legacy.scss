@@ -12,9 +12,6 @@ body {
   @media (min-width: 360px) {
         max-width: 1570px;
     }
-  @media (min-width: 1600px) {
-        max-width: 1850px;
-    }
 }
 
 .box_inside_pages{
@@ -65,15 +62,10 @@ body {
 
 
 .no-otstup{
-    @media screen and (max-width: 435px) {
+    @media screen and (max-width: 992px) {
         margin: 0;
         padding: 0;
-      }  
-
-    @media screen and (max-width: 435px) {
-        margin: 0;
-        padding: 0;
-      }  
+      }   
 }
 
 .remove{
@@ -85,7 +77,8 @@ body {
 .remove_1200{
     @media screen and (max-width: 1200px) {
         display: none;
-      }  
+      }    
+   
 }
 
 
@@ -167,4 +160,25 @@ line-height: 1.8;
   top: 4rem;
   z-index: 1000;
   height: calc(45vh);
+}
+
+.left_line_headline {
+  border: 0.5px solid #39567e;
+  margin-top: 35px;
+  width: 95px;
+  @media screen and (max-width: 992px) {
+    display: none;     
+  }
+}
+
+
+.caption_in_modal_window{
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.text_in_a_modal_window{
+  margin-bottom: 35px;
 }

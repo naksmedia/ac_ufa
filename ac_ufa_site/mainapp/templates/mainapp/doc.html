@@ -17,24 +17,26 @@
                 </p>
             </div>
         </div>
-        <div class="box_document">
-            <div class="row">
-            {% for doc in documents %}
-                <div class="col-xl-4">
-                    <a href="{{ doc.document }}" download="">
-                        <div class="box_doc_file" title="Скачать">
-                            <div class="{% if doc.extension == '.docx' %}icon_word{% else %}icon_pdf{% endif %}"></div>
-                            <p class="doc_text_name">
-                                {{ doc.title }}
-                                {{ doc.extension }}
-                            </p>
+     
+            <div class="box_document">
+                    <div class="row">
+                    {% for doc in documents %}
+                                    <div class="col-xl-3">
+                            <a href="{{ doc.document }}" download="">
+                                <div class="box_doc_file" title="Скачать">
+                                    <div class="{% if doc.extension == '.docx' %}icon_word{% else %}icon_pdf{% endif %}"></div>
+                                    <p class="doc_text_name">
+                                        {{ doc.title|truncatechars:35 }}
+                                        {{ doc.extension }}
+                                    </p>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    {% endfor %}
+        
+                    </div>
                 </div>
-            {% endfor %}
-
-            </div>
-        </div>
+     
 
         <div class="row">
             <div class="col-xl-12">

@@ -14,10 +14,14 @@
     }
 }
 
+.box_doc_file a{
+    text-decoration: none;
+}
+
 .box_doc_file{
     border: 1px solid #f6f6f6;
     padding: 25px 25px;
-    // height: 100px;
+        height: 110px;
     margin-bottom: 15px;
     &:hover{
         box-shadow: 0 2px 18px rgba(0, 0, 0, 0.09);       

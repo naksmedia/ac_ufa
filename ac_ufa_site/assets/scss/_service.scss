@@ -7,15 +7,6 @@
       }
 }
 
-.left_line_headline {
-    border: 0.5px solid #39567e;
-    margin-top: 35px;
-    width: 95px;
-    @media screen and (max-width: 435px) {
-      display: none;     
-    }
-}
-
 .headline_text {   
     font-size: 45px;
     color: #39567e;
@@ -31,7 +22,7 @@
 // img
 
 .box_img_service {   
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     background: url(/static/img/img_service_1.png) no-repeat;
     background-size: cover;   
     a{
@@ -192,7 +183,8 @@
     font-size: 22px;
     font-weight: 450;
     color: #000;
-    margin-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     @media screen and (max-width: 435px) {
        font-size: 16px;   
        margin-top: 5px;   

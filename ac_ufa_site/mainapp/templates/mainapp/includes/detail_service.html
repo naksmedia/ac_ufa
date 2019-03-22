@@ -1,13 +1,26 @@
 {% load static %}
-<div id="trueModal{{ post.pk }}" style="display: none; max-width: 800px;">
-        <h3>
-                <div data-fancybox-close="">
-                        <img src="{% static '/img/close__icon-01.png' %}" class="close_modal float-right" title="Закрыть"
-                                alt="">
+<div id="trueModal{{ post.pk }}" style="display: none; max-width: 1200px;">
+        <div class="row align-items-center">
+                <div class="col-xl-12">
+                        <div class="caption_in_modal_window">
+                                <div data-fancybox-close="">
+                                        <img src="{% static '/img/close__icon-01.png' %}"
+                                                class="close_modal float-right mt-1" title="Закрыть" alt="">
+                                </div>
+                                {{ post.title }}
+                        </div>
                 </div>
-                Оценка квалификаций
-        </h3>
-
-        {{ post.text|safe}}
-
+        </div>
+        <div class="row">
+                <div class="col-xl-12">
+                        <div class="text_in_a_modal_window">
+                                {{ post.text|safe}}
+                        </div>
+                        <button class="request">
+                                <a href="" data-toggle="modal" data-target="#modal-statement"
+                                        class="request_button">Подать
+                                        заявку</a>
+                        </button>
+                </div>
+        </div>
 </div>
