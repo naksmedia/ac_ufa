@@ -1,0 +1,180 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="box_inside_pages" id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-1">
+        <div class="headline_inside_pages_line"></div>
+      </div>
+
+      <div class="col-xl-6">
+        <p class="headline_inside_pages_text" id="#reestr">
+          О центре аттестациии
+        </p>
+        <p class="subtitle_inside_pages">
+          Полная информация
+        </p>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-6">
+        <p class="headline_center">
+          ГОЛОВНОЙ  <br>
+          АТТЕСТАЦИОННО-СЕРТИФИКАЦИОННЫЙ ЦЕНТР
+        </p>
+
+        <p class="org_naks">
+          Организация является членом <br>
+          Саморегулируемая организация Ассоциация «НАКС».
+        </p>
+
+        <p class="small_text_center">
+          Общество с ограниченной ответственностью «Головной аттестационно - сертификационный центр
+          Республики Башкортостан» является членом саморегулируемой организации Некоммерческое партнерство
+          «Национальное Агентство Контроля Сварки» (СРО НП НАКС) Системы Аттестации Сварочного производства
+          (САСв) Ростехнадзора и оказывает услуги по аттестации сварщиков и специалистов сварочного
+          производства.
+
+
+        </p>
+
+        <div class="head_service_info_text">
+          <div class="box_link_service_text">
+            <ul class="link_list_service">
+
+              <a href="http://www.naks.ru/assp/reestrac/index.php?ID=2230779" target="_blank">
+                <li class="link_service_text">
+                  Наш центр в реестрах НАКС
+                </li>
+              </a>
+              <a href="{% url 'reestr' %}">
+                <li class="link_service_text">
+                  Наш реестр САСв
+                </li>
+              </a>
+              <a href="{% url 'profstandarti' %}">
+                <li class="link_service_text">
+                  Профстандарты в области сварки
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <p class="headline_personal">
+        Наша команда:
+        </p>
+   <div class="box_personal">
+    <p class="name_personal">
+      Андрей Викторович <br> Серомыхин
+    </p>
+    <p class="position_personal">
+      Генеральный директор
+    </p>
+   </div>   
+   <div class="box_personal">
+    <p class="name_personal">
+      Андрей Викторович <br> Серомыхин
+    </p>
+    <p class="position_personal">
+      Генеральный директор
+    </p>
+   </div>   
+
+      </div>
+      <div class="col-xl-4">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Виды услуг
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="box_list_service_right_column">
+                  <ul class="list_service">
+                    <a href="" data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true">
+                      <li class="service_right_column">
+                        Независимая оценка квалификаций
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Разрушающий и неразрущающий контроль (испытания)
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Аттестация лабораторий неразрушающего контроля
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Аттестация сварочных материалов
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Аттестация сварочных технологий
+
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Аттестация сварочного оборудования
+                      </li>
+                    </a>
+                    <a href="">
+                      <li class="service_right_column">
+                        Аттестация специалистов неразрушающего контроля
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  Необходимые документы для аттестации
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+               1
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+                  Панель информации
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+{% endblock %}

@@ -29,6 +29,7 @@ urlpatterns = [
    path('all_news/', mainapp.all_news, name='all_news'),
    path('political/', mainapp.political, name='political'),
    path('profstandarti/', mainapp.profstandarti, name='profstandarti'),
+   path('center/', mainapp.center, name='center'),
     path(
         'detailview/<slug:content>/<slug:pk>',
         mainapp.details,
