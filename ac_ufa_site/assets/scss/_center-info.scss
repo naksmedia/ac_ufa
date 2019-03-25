@@ -145,13 +145,18 @@
   
 }
 
+.box_list_service_right_column ul{
+    list-style-type: none;
+}
+
 .service_right_column{
     font-size: 16px;
     font-weight: 450;
     margin-top: 15px;
-    color: #39567e;
-    &:hover{
-        margin-left: 15px;
-        transition: 0.3s;
-    }
+    color: #39567e;  
+}
+
+.img_evidence{
+    width: 50px;
+    height: 350px;;
 }

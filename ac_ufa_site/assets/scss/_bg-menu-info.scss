@@ -210,6 +210,7 @@
     font-size: 16;
     text-transform: uppercase;
     justify-content: space-between;
+    font-weight: 500;
 
     @media screen and (max-width: 992px) {
         margin-top: 15px;
@@ -232,7 +233,7 @@
 
     // font-weight: 450;
     &:hover {
-        color: #39567e;
+        color: #294874;
         transition: 0.2s;
     }
 }
@@ -332,7 +333,7 @@
 // Bg info center
 
 .headline_bg {
-    padding: 96px 0px 96px;
+    padding: 90px 0px 90px;
 
     @media screen and (max-width: 320px) {
         padding: 45px 0px 45px;
@@ -378,7 +379,7 @@
     font-weight: 300;
     color: #fff;
     line-height: 1.8;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 25px;
 }
 
@@ -406,12 +407,13 @@
 
 .button_request {
     margin-bottom: 35px;
+  
 }
 
 .request {
     background: transparent;
     border: none;
-
+    padding: 0;
     a {
         text-decoration: none;
         color: #000;
@@ -423,7 +425,6 @@
 .service {
     background: transparent;
     border: none;
-
     a {
         text-decoration: none;
         color: #fff;

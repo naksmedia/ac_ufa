@@ -1,0 +1,211 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="box_inside_pages" id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-1">
+        <div class="headline_inside_pages_line"></div>
+      </div>
+
+      <div class="col-xl-6">
+        <p class="headline_inside_pages_text" id="#reestr">
+          О центре аттестациии
+        </p>
+        <p class="subtitle_inside_pages">
+          Полная информация
+        </p>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-6">
+        <p class="headline_center">
+         ООО "ГАЦ РБ" Головной аттестационно-сертификационный центр Республики Башкортостан
+        </p>
+
+        <p class="org_naks">
+          Организация является членом <br>
+          Саморегулируемая организация Ассоциация «НАКС».
+        </p>
+
+        <p class="small_text_center">
+          Общество с ограниченной ответственностью «Головной аттестационно - сертификационный центр
+          Республики Башкортостан» является членом саморегулируемой организации Некоммерческое партнерство
+          «Национальное Агентство Контроля Сварки» (СРО НП НАКС) Системы Аттестации Сварочного производства
+          (САСв) Ростехнадзора и оказывает услуги по аттестации сварщиков и специалистов сварочного
+          производства.
+
+
+        </p>
+
+        <div class="head_service_info_text">
+          <div class="box_link_service_text">
+            <ul class="link_list_service">
+
+              <a href="http://www.naks.ru/assp/reestrac/index.php?ID=2230779" target="_blank">
+                <li class="link_service_text">
+                  Наш центр в реестрах НАКС
+                </li>
+              </a>
+              <a href="{% url 'reestr' %}">
+                <li class="link_service_text">
+                  Наш реестр САСв
+                </li>
+              </a>
+              <a href="{% url 'profstandarti' %}">
+                <li class="link_service_text">
+                  Профстандарты в области сварки
+                </li>
+              </a>
+            </ul>
+          </div>
+     
+        <div class="box_img_center">
+          <p class="headline_center">
+            Наш центр
+          </p>
+           <p class="imglist" style="max-width: 1000px;">
+              <a href="{% static 'img/img_center_1.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_1.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_2.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_2.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_3.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_3.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_4.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_4.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_5.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_5.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_6.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_6.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_7.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_7.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_8.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_8.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_9.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_9.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_10.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_10.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_12.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_12.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+              <a href="{% static 'img/img_center_13.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_13.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>              
+          </p>
+         
+        </div>
+    
+        </div>                
+
+      </div>
+      <div class="col-xl-6">
+          <div class="block_personal">
+              <p class="headline_personal">
+                  Руководящий состав ООО «ГАЦ РБ»:
+              </p>
+          <div class="box_personal">
+          <p class="name_personal">
+              Атрощенко Валерий <br> Владимирович
+          </p>
+          <p class="position_personal">
+            Генеральный директор
+          </p>
+          <div class="phone_personal">
+             тел.: (347)246-87-22
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Сафархузина Полина <br> Валерьевна
+          </p>
+          <p class="position_personal">
+              Руководитель АЦСП 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)216-42-33
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Обухова Оксана <br> Георгиевна
+          </p>
+          <p class="position_personal">
+              Главный бухгалтер 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)286-52-70
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Атрощенко Людмила <br> Анатольевна
+          </p>
+          <p class="position_personal">
+              Зав. отделом аттестации специалистов 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)286-52-60
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Гилёва Татьяна <br> Николаевна
+          </p>
+          
+          <p class="position_personal">
+              Зав. отделом аттестации сварщиков 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)246-87-23
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Сафархузина Полина <br> Валерьевна
+          </p>
+          <p class="position_personal">
+              Руководитель ЦОК 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)216-42-33
+          </div>
+          
+          </div>   
+          <div class="box_personal">
+          <p class="name_personal">
+              Савичев Максим <br> Павлович
+          </p>
+          <p class="position_personal">
+              Начальник ЛНК 
+          </p>
+          <div class="phone_personal">
+             тел.: (347)246-87-23
+          </div>
+          
+          </div>
+          </div> 
+      </div>
+   
+    </div>
+
+
+
+  </div>
+</div>
+{% endblock %}

@@ -97,6 +97,8 @@ def news(request):
     return render(request, 'mainapp/news.html')
 def news_two(request):
     return render(request, 'mainapp/news_two.html')
+def center(request):
+    return render(request, 'mainapp/center.html')
 def profstandarti(request):
     return render(request, 'mainapp/profstandarti.html')
 def all_news(request):

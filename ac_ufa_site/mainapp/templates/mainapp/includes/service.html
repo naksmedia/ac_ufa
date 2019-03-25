@@ -15,41 +15,40 @@
                 </p>
             </div>
         </div>
-        <div class="offset-lg-1 col-lg-11">
-            <div class="row" id="service">
-                {% for post in posts %}
-                <div class="col-sm-6 no-otstup">
-                    <div class="box_img_service">
-                        <a href="" class="service_link" >
-                            <div class="box_content">
-                                <p class="name_service">
-                                    {{ post.title }}
-                                </p>
-                                <div class="line_service_yellow"></div>
-                            </div>
-                    </div>
-                    </a>
-                    <div class="box_head_serivce">
-                        <p class="head_service">
-                            {% comment %} {{ post.title }} {% endcomment %}
-                            {{ post.short_description }}
-                        </p>
-                        <p class="info_text_service">
-                            {% comment %} {{ post.text|safe}} {% endcomment %}
-                        </p>
-                        <button class="more">
-                            <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true"
-                                class="more_button">
-                                Подробнее
-                            </a>
-                        </button>
-                        {% include 'mainapp/includes/detail_service.html' %}
-                    </div>
 
+        <div class="row" id="service">
+            {% for post in posts %}
+            <div class="col-xl-4">
+                <div class="box_img_service">
+                    <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="service_link">
+                        <div class="box_content">
+                            <p class="name_service">
+                                {{ post.title }}
+                            </p>
+                            <div class="line_service_yellow"></div>
+                        </div>
                 </div>
-                {% endfor %}
+                </a>
+                <div class="box_head_serivce">
+                    <!-- <p class="head_service">
+                        {% comment %} {{ post.title }} {% endcomment %}
+                        {{ post.short_description }}
+                    </p> -->
+                    <p class="info_text_service">
+                        {% comment %} {{ post.text|safe}} {% endcomment %}
+                    </p>
+                    <button class="more">
+                        <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="more_button">
+                            Подробнее
+                        </a>
+                    </button>
+                    {% include 'mainapp/includes/detail_service.html' %}
+                </div>
 
             </div>
+            {% endfor %}
+
         </div>
+
     </div>
 </div>

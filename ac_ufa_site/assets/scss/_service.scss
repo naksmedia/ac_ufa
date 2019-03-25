@@ -25,6 +25,7 @@
     margin-bottom: 25px;
     background: url(/static/img/img_service_1.png) no-repeat;
     background-size: cover;   
+    cursor: pointer;
     a{
         text-decoration: none;
     }
@@ -155,15 +156,14 @@
 }
 
 .name_service {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     color: #fff;
     font-weight: 450;
-    width: 60%;
+    // width: 60%;
     @media screen and (max-width: 435px) {
-        font-size: 14px;
-        width: 60%;
-        text-transform: uppercase;
+        font-size: 18px;
+        // width: 60%;       
         line-height: 1.8;
     }
 
@@ -223,13 +223,7 @@
     padding: 10px 25px;
     color: #000;  
     cursor: pointer; 
-    @media screen and (max-width: 435px) {
-        padding: 10px 140px;
-    }
-    @media screen and (max-width: 400px) {
-        padding: 10px 100px;
-    }
-
+   
     &:hover {
         background-color: #e9b754;
         transition: 0.3s;

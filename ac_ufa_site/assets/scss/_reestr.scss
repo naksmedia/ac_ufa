@@ -80,7 +80,7 @@ label[for=search__work__subject] {
     border-bottom: 1px solid #ced4da;
     font-size: 14px;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 15px;   
 }
 
 
@@ -162,10 +162,13 @@ button:focus {
     background: transparent;
 }
 
+.card-header{
+    border: 1px solid #afdbfc;
+}
+
 .card-header:hover {
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.09);
-    background: transparent;
-    border: 1px solid #afdbfc;
+    background: transparent;    
     transition: 0.2s;
 }
 
@@ -214,8 +217,12 @@ button:focus {
     }
 }
 
+.number__list .page-item{
+    margin-top: 0px;
+}
+
 .number__list{
-    margin-top: 15px;
+   
     @media screen and (max-width: 320px) {
         float: left;
     }
@@ -224,6 +231,7 @@ button:focus {
 .page-link{
     color: #2e3f62;
 }
+
 
 .page-link:hover{
     transition: 0.2s;
