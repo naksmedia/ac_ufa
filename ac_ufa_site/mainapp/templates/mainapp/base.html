@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
   <link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">  
+  <link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
   {% endblock %}
 
 
@@ -40,9 +40,9 @@
 
   <!-- Include bg-menu-info -->
   {% if request.resolver_match.url_name == 'index' %}
-  {% include 'mainapp/includes/bg-menu-info.html' %}
+    {% include 'mainapp/includes/bg-menu-info.html' %}
   {% else %}
-  {% include 'mainapp/includes/bg-inner-page.html' %}
+    {% include 'mainapp/includes/bg-inner-page.html' %}
   {% endif %}
   {% comment %} <div w3-include-html="includes/bg-menu-info.html" ></div> {% endcomment %}
   <!-- End Include bg-menu-info -->

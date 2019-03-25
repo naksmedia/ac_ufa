@@ -713,7 +713,6 @@ input[type=file] {
 
 .box_img_service {
   margin-bottom: 25px;
-  background: url(/static/img/img_service_1.png) no-repeat;
   background-size: cover;
   cursor: pointer; }
   .box_img_service a {
@@ -1528,8 +1527,6 @@ label[for=search__work__subject] {
   font-size: 14px;
   padding: 10px;
   margin-bottom: 15px; }
-  .form__subject__search:focus {
-    background-color: rgba(0, 0, 0, 0.13); }
 
 label[for=type__of__viev] {
   font-size: 16px; }

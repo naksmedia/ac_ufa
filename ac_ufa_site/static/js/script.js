@@ -52,7 +52,7 @@ $(document).ready(function() {
       }
     }
   })
-  
+
   // Просмотр+скачать
   $().fancybox({
     selector: '.owl-item:not(.cloned) a',
@@ -165,7 +165,7 @@ $(document).ready(function() {
   //     }, options);
 
   //     var uploadId = 1;
-  //     //update the messaging 
+  //     //update the messaging
   //     $('.file-uploader__message-area p').text(options.MessageAreaText || settings.MessageAreaText);
 
   //     //create and add the file list and the hidden input list
@@ -187,7 +187,7 @@ $(document).ready(function() {
   //       var check = checkFile(fileName);
   //       if (check === "valid") {
 
-  //         // move the 'real' one to hidden list 
+  //         // move the 'real' one to hidden list
   //         $('.hidden-inputs').append($('.file-chooser__input'));
 
   //         //insert a clone after the hiddens (copy the event handlers too)
@@ -207,7 +207,7 @@ $(document).ready(function() {
   //           //remove the name from file-list that corresponds to the button clicked
   //           $(this).parent().hide("puff").delay(10).queue(function () { $(this).remove(); });
 
-  //           //if the list is now empty, change the text back 
+  //           //if the list is now empty, change the text back
   //           if ($('.file-list li').length === 0) {
   //             $('.file-uploader__message-area').text(options.MessageAreaText || settings.MessageAreaText);
   //           }
@@ -255,7 +255,7 @@ $(document).ready(function() {
   //   };
   // }(jQuery));
 
-  // //init 
+  // //init
   // $(document).ready(function () {
   //   $('.fileUploader').uploader({
   //     MessageAreaText: "Прикрепить файлы"

@@ -17,13 +17,13 @@
         </div>
 
         <div class="row" id="service">
-            {% for post in posts %}
+            {% for publ in publications %}
             <div class="col-xl-4">
-                <div class="box_img_service">
+                <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
                     <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="service_link">
                         <div class="box_content">
                             <p class="name_service">
-                                {{ post.title }}
+                                {{ publ.post.title }}
                             </p>
                             <div class="line_service_yellow"></div>
                         </div>
@@ -38,7 +38,7 @@
                         {% comment %} {{ post.text|safe}} {% endcomment %}
                     </p>
                     <button class="more">
-                        <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="more_button">
+                        <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="more_button">
                             Подробнее
                         </a>
                     </button>

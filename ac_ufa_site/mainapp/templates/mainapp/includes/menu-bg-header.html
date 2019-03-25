@@ -1,5 +1,5 @@
             <div class="row align-items-center">
-               
+
                 <div class="col-xl-12 no-otstup">
                     <div class="menu__background">
                         <div class="menu__navbar">
@@ -9,8 +9,9 @@
                                 <!-- Navbar brand -->
 
                                 <!-- Collapse button -->
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
 
@@ -27,7 +28,7 @@
 
                                         <!-- Dropdown -->
                                         <li class="nav-item active">
-                                            <a class="smoothScroll nav-link" href="#center">Центр аттестации
+                                            <a class="nav-link{% if request.resolver_match.url_name == 'index' %} smoothScroll{% endif %}" href="{% if request.resolver_match.url_name == 'index' %}#center{% else %}{% url 'index' %}#center{% endif %}">Центр аттестации
                                                 <span class="sr-only">(current)</span>
                                             </a>
                                         </li>
@@ -57,7 +58,7 @@
                                 <div class="header_phone_mob">
                                     <a href="tel: 8(347) 246-87-26" title="Позвонить">
                                         <p class="text_phone_mob">
-                                             8(347) 246-87-26
+                                            8(347) 246-87-26
                                         </p>
                                     </a>
                                     <p class="text_phone_consultant_mob">
@@ -70,5 +71,5 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
