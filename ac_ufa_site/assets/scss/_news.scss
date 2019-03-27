@@ -13,8 +13,8 @@
     margin-bottom: 25px;
 }
 
-.small__text__news {
-    font-size: 18px;
+.small_text_news {
+    font-size: 16px;
     font-weight: 400;
     color: #000;
     margin-top: 20px;
@@ -168,6 +168,13 @@
 
 .soglashenie__button__text:hover {
     background-color: #f1f1f1;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    -moz-cursor: pointer;
 }
 
 .carousel__slide {
@@ -194,15 +201,6 @@
     transform: rotate(180deg);
 }
 
-.box__news__inside__block {   
-    margin-top: 30px;
-    padding: 35px ;
-background: #eeeeee3f;
-    @media screen and (max-width: 320px) {
-        padding: 0px;
-        background-color: transparent;
-    }
-}
 
 .header__all__news {
     font-size: 18px;

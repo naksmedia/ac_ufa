@@ -20,13 +20,18 @@
             {% for publ in publications %}
             <div class="col-xl-4">
                 <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
-                    <a data-fancybox="" data-src="#trueModal{{ post.pk }}" data-modal="true" class="service_link">
+                    <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="service_link">
                         <div class="box_content">
                             <p class="name_service">
                                 {{ publ.post.title }}
                             </p>
                             <div class="line_service_yellow"></div>
-                        </div>
+                            <button class="more">
+                                    <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="more_button">
+                                        Подробнее
+                                    </a>
+                                </button>
+                        </div>                           
                 </div>
                 </a>
                 <div class="box_head_serivce">
@@ -36,12 +41,7 @@
                     </p> -->
                     <p class="info_text_service">
                         {% comment %} {{ post.text|safe}} {% endcomment %}
-                    </p>
-                    <button class="more">
-                        <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="more_button">
-                            Подробнее
-                        </a>
-                    </button>
+                    </p>           
                     {% include 'mainapp/includes/detail_service.html' %}
                 </div>
 
