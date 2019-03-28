@@ -1395,6 +1395,34 @@ body {
   font-weight: 350;
   margin-bottom: 15px; }
 
+.enter_system_edo::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  margin-top: 5px;
+  background: url(/static/img/enter_system.png) center 0 no-repeat; }
+
+.enter_system_link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 25px; }
+
+.enter_system_edo a {
+  text-decoration: none;
+  color: #fff; }
+  @media screen and (max-width: 1200px) {
+    .enter_system_edo a {
+      margin-top: 15px;
+      margin-bottom: 15px; } }
+
+@media screen and (max-width: 1200px) {
+  .enter_system_edo {
+    margin-top: 25px;
+    margin-bottom: 25px; } }
+
 .header__form__subject {
   margin-bottom: 20px; }
 
