@@ -752,12 +752,11 @@ input[type=file] {
 
 .name_service {
   font-size: 26px;
-  font-weight: 400;
   color: #fff;
   font-weight: 450; }
-  @media screen and (max-width: 435px) {
+  @media screen and (max-width: 1200px) {
     .name_service {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.8; } }
 
 .line_service_yellow {

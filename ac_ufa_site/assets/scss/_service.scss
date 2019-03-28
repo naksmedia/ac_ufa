@@ -70,15 +70,11 @@
 }
 
 .name_service {
-    font-size: 26px;
-    font-weight: 400;
+    font-size: 26px;  
     color: #fff;
-    font-weight: 450;
-
-    // width: 60%;
-    @media screen and (max-width: 435px) {
-        font-size: 18px;
-        // width: 60%;
+    font-weight: 450;    
+    @media screen and (max-width: 1200px) {
+        font-size: 20px;        
         line-height: 1.8;
     }
 
