@@ -22,6 +22,47 @@
 
 // img
 
+.box_img_service_ocenka{
+    background: url(/static/img/img_ocenka.jpg) ;
+}
+
+.box_img_service_ocenka:hover .more {
+    opacity: 1;
+    margin-top: 15px;
+    transition: 0.2s;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.box_img_service_ocenka {
+    margin-bottom: 25px;
+  
+    background-size: cover;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+
+    @media screen and (max-width: 435px) {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    
+    }
+}
+
+
+
 .box_img_service:hover .more {
     opacity: 1;
     margin-top: 15px;

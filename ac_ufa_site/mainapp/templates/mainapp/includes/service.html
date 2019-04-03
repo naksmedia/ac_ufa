@@ -1,4 +1,5 @@
 {% load static %}
+{% load link_holders %}
 <div class="box_background" id="service">
     <div class="container">
         <div class="row">
@@ -27,26 +28,48 @@
                             </p>
                             <div class="line_service_yellow"></div>
                             <button class="more">
-                                    <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="more_button">
-                                        Подробнее
-                                    </a>
-                                </button>
-                        </div>                           
+                                <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true"
+                                    class="more_button">
+                                    Подробнее
+                                </a>
+                            </button>
+                        </div>
                 </div>
                 </a>
                 <div class="box_head_serivce">
-                    <!-- <p class="head_service">
-                        {% comment %} {{ post.title }} {% endcomment %}
-                        {{ post.short_description }}
-                    </p> -->
                     <p class="info_text_service">
                         {% comment %} {{ post.text|safe}} {% endcomment %}
-                    </p>           
+                    </p>
                     {% include 'mainapp/includes/detail_service.html' %}
                 </div>
 
             </div>
             {% endfor %}
+            <div class="col-sm-6 col-xl-4">
+                <a href="{% url 'ocenka_details' %}#ocenka"  class="service_link">
+                <div class="box_img_service_ocenka">
+                        <div class="box_content">
+                            <p class="name_service">
+                               Центр оценки <br> квалификаций
+                            </p>
+                            <div class="line_service_yellow"></div>
+                            <button class="more">
+                              <a href="{% url 'ocenka_details' %}#ocenka" class="more_button">
+                                  Подробнее
+                              </a>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box_head_serivce">
+                    <p class="info_text_service">
+
+                    </p>
+                    {% include 'mainapp/includes/detail_service.html' %}
+                </div>
+
+            </div>
 
         </div>
 

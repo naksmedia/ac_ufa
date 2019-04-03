@@ -101,6 +101,8 @@ def doc(request):
     return render(request, 'mainapp/doc.html', content)
 def news(request):
     return render(request, 'mainapp/news.html')
+def ocenka_details(request):
+    return render(request, 'mainapp/ocenka_details.html')
 def news_two(request):
     return render(request, 'mainapp/news_two.html')
 def center(request):

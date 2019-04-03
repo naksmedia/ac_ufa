@@ -9,7 +9,6 @@
     background-color: #50b3ff11;
     font-size: 16px;
     color: #000;
-    border-left: 1px solid #50b3ff;
     
 }
 
@@ -38,7 +37,6 @@ font-size: 20px;
 
 .box_personal{
     padding: 15px 25px;
-    background-color: #50b3ff11;
     margin-bottom: 10px;
     border-left: 1px solid #50b3ff;
     &:hover{
@@ -87,4 +85,31 @@ font-size: 20px;
         -moz-transform: scale(1.01);
         -o-transform: scale(1.01);
     }
+}
+
+.nav-tabs .nav-link{
+    border: 0px;
+    border-bottom: 0px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    @media screen and (max-width: 320px) {
+      font-size: 12px;
+      margin-bottom: 5px;
+     }
+    &:focus{
+        color: rgb(90, 90, 90);
+    }
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    border: 0px;
+    border-bottom: 0px;
+}
+
+.nav-tabs{
+    border: 0px;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+    color: rgb(90, 90, 90);
 }
